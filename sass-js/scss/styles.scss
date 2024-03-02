@@ -34,10 +34,10 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 @import "bootstrap/scss/functions";
 
 // Customize some defaults
-$body-color: #333;
-$body-bg: #fff;
-$border-radius: .4rem;
-$success: #7952b3;
+//$body-color: #111;
+//$body-bg: #e8eaed;
+//$border-radius: .4rem;
+//$success: #7952b3;
 
 // add m.wachi
 // $primary: #885040;
@@ -54,10 +54,11 @@ $success: #7952b3;
 @import "bootstrap/scss/reboot";
 
 // add m.wachi
-//$custom-colors: (
+$custom-colors: (
 //  "my-base-color": $blue-600
-//);
-//$theme-colors: map-merge($theme-colors, $custom-colors);
+    "my-color01": #0e1d54
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 
 
