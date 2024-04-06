@@ -93,12 +93,12 @@
         z-index: 1500;
       }
 
-      @media screen and (max-width: 600px) {
-        .my-class01 {
+
+      .sidebar-toggler {
           /* visibility: hidden; */
           display: none;
-        }
       }
+
 
       .ov2cs-grid-layout01 {
         display: grid;
@@ -106,6 +106,26 @@
         grid-template-columns: 1fr 5fr;
         gap: 1.5rem;
       }
+
+      
+      .ov2cs-aside {
+        position: sticky;
+        top: 4.5rem;
+        grid-area: sidebar;
+        height: calc(100vh - 6rem);
+      }
+      
+      @media screen and (max-width: 600px) {
+        .ov2cs-aside {
+          /* visibility: hidden; */
+          display: none;
+        }
+        .sidebar-toggler {
+          /* visibility: hidden; */
+          display: inline;
+        }
+      }
+
 
       :root {
         /* --my-base-color01: #046cb2; */
@@ -156,12 +176,17 @@
       -->
       <nav >
         <div class="container-fluid">
+          <span class="sidebar-toggler">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </span>
           <a class="navbar-brand" href="#">oldvb2cs</a>
         </div>
       </nav>
     </header>
     <div class="container-xxl my-md-4 ov2cs-grid-layout01" >
-      <aside style="position: sticky; top: 4.5rem; grid-area: sidebar; height: calc(100vh - 6rem);">
+      <aside class="ov2cs-aside">
         <div class="d-flex flex-nowrap">
           <ul class="list-unstyled ps-0">
             <li class="mb-1">
