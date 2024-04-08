@@ -93,12 +93,11 @@
         z-index: 1500;
       }
 
-
+      /*
       .sidebar-toggler {
-          /* visibility: hidden; */
           display: none;
       }
-
+      */
 
       .ov2cs-grid-layout01 {
         display: grid;
@@ -109,21 +108,23 @@
 
       
       .ov2cs-aside {
-        position: sticky;
+        /* position: sticky; */
         top: 4.5rem;
         grid-area: sidebar;
         height: calc(100vh - 6rem);
       }
       
       @media screen and (max-width: 600px) {
-        .ov2cs-aside {
+        /* .ov2cs-aside { */
           /* visibility: hidden; */
-          display: none;
-        }
+        /*  display: none;
+        } */
+        /*
         .sidebar-toggler {
-          /* visibility: hidden; */
+          -- visibility: hidden;
           display: inline;
         }
+         */
       }
 
 
@@ -176,8 +177,8 @@
       -->
       <nav >
         <div class="container-fluid">
-          <span class="sidebar-toggler">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="sidebar-toggler d-lg-none">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSide01" aria-controls="offcanvasSide01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
           </span>
@@ -185,8 +186,8 @@
         </div>
       </nav>
     </header>
-    <div class="container-xxl my-md-4 ov2cs-grid-layout01" >
-      <aside class="ov2cs-aside">
+    <div class="container-xxl my-md-4 ov2cs-grid-layout01">
+      <aside class="ov2cs-aside offcanvas-lg offcanvas-start" id="offcanvasSide01" >
         <div class="d-flex flex-nowrap">
           <ul class="list-unstyled ps-0">
             <li class="mb-1">
