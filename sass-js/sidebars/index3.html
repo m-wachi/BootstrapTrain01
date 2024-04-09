@@ -98,14 +98,13 @@
           display: none;
       }
       */
-
+      
       .ov2cs-grid-layout01 {
         display: grid;
         grid-template-areas: "sidebar main";
         grid-template-columns: 1fr 5fr;
         gap: 1.5rem;
       }
-
       
       .ov2cs-aside {
         position: sticky;
@@ -113,12 +112,26 @@
         grid-area: sidebar;
         height: calc(100vh - 6rem);
       }
+
+      .ov2cs-main {
+        grid-area: main;
+      }
       
-      @media screen and (max-width: 600px) {
-        /* .ov2cs-aside { */
+      @media screen and (max-width: 576px) {
+        
+        .ov2cs-grid-layout01 {
+          display: grid;
+          grid-template-areas: "main";
+          grid-template-columns: 1fr;
+          gap: 0rem;
+        }
+        
+        .ov2cs-aside {
           /* visibility: hidden; */
-        /*  display: none;
-        } */
+          position: fixed;
+          /* grid-area: "main"; */
+          top: 20px;
+        }
         /*
         .sidebar-toggler {
           -- visibility: hidden;
@@ -177,7 +190,7 @@
       -->
       <nav >
         <div class="container-fluid">
-          <span class="sidebar-toggler d-lg-none">
+          <span class="sidebar-toggler d-sm-none">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSide01" aria-controls="offcanvasSide01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -187,7 +200,7 @@
       </nav>
     </header>
     <div class="container-xxl my-md-4 ov2cs-grid-layout01">
-      <aside class="ov2cs-aside offcanvas-lg offcanvas-start" id="offcanvasSide01" >
+      <aside class="ov2cs-aside offcanvas-sm offcanvas-start" id="offcanvasSide01" >
         <div class="d-flex flex-nowrap">
           <ul class="list-unstyled ps-0">
             <li class="mb-1">
@@ -204,7 +217,7 @@
             </li>
           </ul>
       </aside>
-      <main> 
+      <main class="ov2cs-main"> 
         <div>
           <!--
           <ul>
